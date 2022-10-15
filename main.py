@@ -1,6 +1,8 @@
 import speedtest
 import datetime
 
+path = 'Data.txt'
+
 
 def test():
     s = speedtest.Speedtest(secure=True)
@@ -19,7 +21,7 @@ def write():
     data += 'Upload: {:.2f} Kb/s\n'.format(u / 1024)
     data += 'Ping: {}\n'.format(p)
     data += '------------------------------------\n'
-    file1 = open("Data.txt", "a")
+    file1 = open(path, "a")
     file1.write(data)
     file1.close()
 
